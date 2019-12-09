@@ -8,5 +8,5 @@ namespace Labirynth
     {
         public int PlayerPositionColumn { get; set; }
         public int PlayerPositionRow { get; set; }
-       
+    }
 }

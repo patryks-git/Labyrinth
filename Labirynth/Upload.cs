@@ -8,11 +8,22 @@ namespace Labirynth
 {
     public static class Upload
     {
-        public static string? UploadMap()
+        
+        public static List<string> UploadMap(string filePath)
         {
-            string textLine = "nothin'";
-            //textLine = TextReader.Read();
-            return "nothing" + textLine;
+            
+            if (File.Exists(filePath))
+            {
+                List<string> map = new List<string>();
+                foreach (string mapLine in File.ReadAllLines(filePath))
+                {
+                    map.Add(mapLine);
+                }
+                return map;
+            }
+            else
+                Console.WriteLine("File not found.");
+                return null;
         }
     }
 }

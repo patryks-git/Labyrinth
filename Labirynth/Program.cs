@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+
 
 namespace Labirynth
 {
@@ -6,7 +8,14 @@ namespace Labirynth
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            List<string> map = new List<string>();
+            string path = @"C:\Users\paatryyk7\Desktop\olc3DProject\map.txt";
+            map = Upload.UploadMap(path);
+            foreach(string maped in map)
+            {
+                Console.WriteLine(maped);
+            }
+            
         }
     }
 }
