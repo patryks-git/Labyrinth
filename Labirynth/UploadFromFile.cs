@@ -1,14 +1,23 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.IO;
-using System.Linq;
 
-namespace Labirynth
+namespace Labyrinth
 {
-    public static class Upload
+    public static class UploadFromFile
     {
-        
+        public static string FilePath { get; private set; }
+        public static void ChooseFilePath(string filePath)
+        {
+            if (File.Exists(filePath))
+            {
+                FilePath = filePath;
+            }
+            else
+            {
+                Console.WriteLine("File not found.");
+            }
+        }
         public static List<string> UploadMap(string filePath)
         {
             

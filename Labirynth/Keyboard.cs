@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Labirynth
+namespace Labyrinth
 {
     public static class Keyboard
     {
@@ -11,5 +11,10 @@ namespace Labirynth
         {
             return Convert.ToChar(Console.Read());
         }        
+        public static int[] GetHorizonData()
+        {
+
+            return [1, 2, 3];
+        }
     }
 }
